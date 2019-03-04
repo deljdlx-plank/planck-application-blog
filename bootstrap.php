@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 if(is_file(__DIR__.'/static-vendor/planck/__planckbootstrap/application-bootstrap.php')) {
     define('PHI_LIB_PATH', __DIR__.'/static-vendor/phi');
     $planckApplicationBootstrap = require(__DIR__.'/static-vendor/planck/__planckbootstrap/application-bootstrap.php');
@@ -24,12 +22,12 @@ $planckApplicationBootstrap->getAutoloader()->addNamespace('PlanckeyBlogPublic',
 
 
 
-
 $planckApplicationBootstrap->registerVirtualPath(
     realpath(__DIR__.'/../__data/public'),
     __DIR__.'/www/data',
     'front-data'
 );
+
 
 
 $planckApplicationBootstrap->registerVirtualPath(
